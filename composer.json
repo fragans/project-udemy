@@ -1,0 +1,14 @@
+{
+    "name": "ubuntu/fragans",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fragans/project-udemy.git"
+    },
+    "authors": [
+        {
+            "name": "Elgayuda",
+            "email": "elga.yuda@kompas.com"
+        }
+    ],
+    "require": {}
+}

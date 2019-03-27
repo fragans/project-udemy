@@ -1,0 +1,247 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/preflight";
+ */
+@tailwind preflight;
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+@tailwind components;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/utilities";
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
+ 
+ 
+ 
+ 
+ /*CUSTOM CSS*/
+.logo-brand{
+    font-size: 78px;
+}
+h3{
+     font-size: 24px;
+     line-height: 1.5;
+}
+
+a:link,a:visited {
+  text-decoration: none;
+  color: #000;
+}
+a:hover{
+    color: #e5633f;
+}
+
+body,footer{
+    font-family: 'IBM Plex Serif', serif;
+}
+.logged-in {
+top: 32px;    
+}
+
+
+.border-double{
+    border-style: double;
+}
+
+.menu-item{
+    padding : 6px 30px;
+     display: inline-block;
+}
+.post-tags a{
+    padding: 10px 1rem;
+    margin: 5px 8px 5px 0px;
+    background: #f1f1f1;
+    margin-right: 5px;
+}
+.post-tags a:hover{
+    background: #e5633f;
+    color : #fff;
+}
+.post-category a{
+    padding: 10px 1rem;
+    margin: 5px 8px 5px 0px;
+    background: #e5633f;
+    color : #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+/*widget*/
+
+@media only screen and (max-width: 992px) {
+    .widget-area > section{
+        width: 50%;
+    }
+    .widget-area{
+        display: flex;
+    }
+}
+
+
+
+.widget ul{
+    padding: 0;
+    list-style: none;
+    counter-reset: my-awesome-counter;
+}
+.widget ul li{
+    position: relative;
+    counter-increment:my-awesome-counter;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+.widget ul li a{
+    position: absolute;
+    left: 25%;
+}
+.widget ul li::before {
+  content: counter(my-awesome-counter) ". ";
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.widget-title{
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: table;
+}
+.widget-title span{
+    padding-left: 15px;
+    padding-right: 10px;
+    display: table;
+    
+}
+.widget-title span::before{
+    background: #000 none repeat scroll 0 0;
+    border-radius: 50%;
+    content: "";
+    height: 8px;
+    left: 0;
+    margin-top: -4px;
+    position: absolute;
+    top: 50%;
+    width: 8px;
+} 
+.widget-title::after{
+    border-top: 2px solid black;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 50%;
+    
+}
+.post-date{
+    color: #888;
+}
+
+/*SEARCH FORM*/
+.search-form{
+    margin: 1rem 0rem;
+}
+.search-form label span{
+    display: none;
+    
+}
+.search-field{
+    padding: 0.5rem;
+    border: 1px solid black;
+    width: 60%;
+}
+.search-submit{
+    border: 1px solid #333;
+    background: #333 none repeat scroll 0 0;
+    color: #fff;
+    float: right;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    width: 40%;
+}
+/*SINGLE*/
+.post-body p img{
+    width: 100%;
+    margin: 0;
+}
+.post-body p, .post-body h1{
+    margin-left: 5rem;
+    font-size: 1.0625rem;
+    letter-spacing: 0;
+    line-height: 1.8;
+    
+}
+
+/*PAGINATION*/
+.page-numbers{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: baseline;
+    
+}
+.page-numbers .current{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.page-numbers li a::after, .page-numbers li span::after{
+    position: absolute;
+    content: '.';
+    left: 65%;
+    top: 0;
+}
+.next.page-numbers::after, .prev.page-numbers::after{
+    content: ' ';
+}
+.page-numbers li{
+    position: relative;
+    padding: 0 1rem;
+}
